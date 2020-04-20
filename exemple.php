@@ -43,4 +43,6 @@ echo $legumes;
 }
 }
 echo 'testgit2';
+echo 'testgitblabla';
+echo 'test3';
 ?>
