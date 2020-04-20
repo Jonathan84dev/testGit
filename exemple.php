@@ -36,15 +36,71 @@ $aubergines =
     ]
 ];
 
-foreach ($ete as $legumes){
-foreach ($legumes as $item);{
-echo $legumes;
+echo "<ul>";
 
+foreach ($ete as $legume => $caracteristiques) {
+
+echo "<li>" . $legume . "</li>";
+echo "<ul>";
+foreach ($caracteristiques as $carac => $values)
+{
+    echo "<li>" . $carac . ":" . $values . "</li>";
 }
+echo "</ul>";
 }
-echo 'testgit2';
-echo 'testgitblabla';
-echo 'test3';
-echo 'test4';
-echo 'test5';
+echo "</ul>";
+
+// Afficher la liste des saisons, puis des légumes de chaque saison, puis des caractéristiques de chaque légume
+// dans plusieurs ul>li successifs
+
+$saisons = [
+    "été" => [
+        "aubergines" => [
+            "quantité" => 12,
+            "prix" => 5
+        ],
+        "tomates" => [
+            "quantité" => 10,
+            "prix" => 6
+        ]
+    ],
+    "automne" => [
+        "pomems de terre" => [
+            "quantité" => 12,
+            "prix" => 5
+        ],
+        "carottes" => [
+            "quantité" => 10,
+            "prix" => 6
+        ]
+    ],
+    "hiver" => [
+        "avocats" => [
+            "quantité" => 12,
+            "prix" => 5
+        ],
+        "pêches" => [
+            "quantité" => 10,
+            "prix" => 6
+        ]
+    ]
+];
+
+echo "<ul>";
+foreach ($saisons as $saison => $legumes) {
+echo "<li>". $saison . "</li>";
+
+echo "<ul>";
+foreach ($legumes as $legume => $item) {
+echo "<li>" . $legume . "</li>";
+
+echo "<ul>";
+foreach ($item as $carac => $values){
+echo "<li>" . $carac . ":" .$values. "</li>";
+}
+echo "</ul>";
+}
+echo "</ul>";
+}
+echo "</ul>";
 ?>
